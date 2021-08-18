@@ -4,5 +4,11 @@ class Admin::DashboardController < ApplicationController
 
 
   def show
+    @product_count = Product.count
+
+    # @category_count = Categories.count
+
+    # [@product_count, @category_count]
+    [@product_count]
   end
 end
