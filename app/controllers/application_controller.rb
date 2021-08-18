@@ -20,6 +20,11 @@ class ApplicationController < ActionController::Base
   end
   helper_method :cart_subtotal_cents
 
+  def order_total_cents
+    @order = Order.find(params[:id]).total_cents
+  end
+  helper_method :order_total_cents
+
 
   def update_cart(new_cart)
     cookies[:cart] = {
