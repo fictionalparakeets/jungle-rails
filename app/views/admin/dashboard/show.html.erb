@@ -1,23 +1,24 @@
-
   <header class="page-header">
     <h1>Admin Dashboard</h1>
   </header>
 
 
-  <article class="product-detail">
 
-    <div class="row">
+<div class="panel panel-default items">
+  <table class="table table-bordered">
+    <tbody>
+      <tr>
+        <th>Number of Products:</th>
+        <th><%= @product_count %></th>
+        <th><%= link_to "See All Products", [:admin, :products], class: 'btn btn-info' %></th>
+      </tr>
+      <tr>
+        <th>Number of Categories:</th>
+        <th><%= @category_count %></th>
+        <th><%= link_to "See All Categories", [:admin, :categories], class: 'btn btn-info' %></th>
+      </tr>
+    </tbody>
+   
+  </table>
+</div>
 
-      <div class="col-sm-8">
-        <dl class="dl-horizontal">
-          <dt>Number of Products</dt>
-          <dd><%= @product_count %></dd>
-          <dd><%= link_to "See All Products", [:admin, :products] %></dd>
-          <dt>Number of Categories</dt>
-          <dd><%= @category_count %></dd>
-          <%# <dd><%= link_to "See All Categories", [:admin, :category] %></dd> %>
-        </dl>
-      </div>
-    </div>
-
-  </article>
