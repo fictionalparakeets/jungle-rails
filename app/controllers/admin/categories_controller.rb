@@ -6,7 +6,6 @@ class Admin::CategoriesController < ApplicationController
 
   def index
     @categories = Category.order(id: :desc).all
-    # @categories = Category.order(id: :desc).all
   end
 
   def new
@@ -23,7 +22,7 @@ class Admin::CategoriesController < ApplicationController
     end
   end
 
-  
+
   private
 
   def category_params

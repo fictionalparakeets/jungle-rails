@@ -4,9 +4,9 @@
     <br>
   </td>
   <td>
-    <%=  %>
+    <%= category.created_at.strftime("%d/%m/%Y at %H:%M:%S") %>
   </td>
   <td>
-    <%= link_to fa_icon('trash'), [:admin, category], class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Are you sure?" } %>
+    <%= category.updated_at.strftime("%d/%m/%Y at %H:%M:%S") %>
   </td>
 </tr>
