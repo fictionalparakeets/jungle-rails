@@ -1,18 +1,46 @@
 <h1>Signup!</h1>
 
+<br>
 <%= form_for :user, url: '/users' do |f| %>
+  <form class="login-form">
 
-  First Name: <%= f.text_field :first_name %>
-  Last name: <%= f.text_field :last_name %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
-  Password Confirmation: <%= f.password_field :password_confirmation %>
-  <% flash.each do |type, msg| %>
-  <div>
-    <%= msg %>
+  <div class="form-group">
+    First Name:
+    <br>
+    <%= f.text_field :first_name %>
   </div>
-  <% end %>
-  <%= f.submit "Submit" %>
+
+  <div class="form-group">
+    Last name:
+    <br>
+    <%= f.text_field :last_name %>
+  </div>
+  
+  <div class="form-group">
+    Email:
+    <br>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="form-group">
+    Password:
+    <br>
+    <%= f.password_field :password %>
+  </div>
+  
+  <div class="form-group">
+    Password Confirmation:
+    <br>
+    <%= f.password_field :password_confirmation %>
+  </div>
+
+  <div class="form-group">
+    <%= flash.alert %>
+  </div>
+  
+  <br>
+  <%= f.submit "Submit", class: 'btn btn-info' %>
+  </form>
 
 <% end %>
 
