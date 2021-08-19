@@ -30,7 +30,7 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-       <li class="dropdown">
+        <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 
             <span class="text-danger"><%= fa_icon 'lock', text: 'Admin' %></span>
@@ -41,6 +41,13 @@
             <li><%= link_to 'Products',  [:admin, :products] %></li>
             <li><%= link_to 'Categories',  [:admin, :categories] %></li>
           </ul>
+        </li>
+        <li>
+          <% if current_user %>
+            Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+          <% else %>
+            <%= link_to 'Login', '/login' %><%= link_to 'Signup', '/signup' %>
+          <% end %>          
         </li>
         <li>
           <%= link_to cart_path do %>
